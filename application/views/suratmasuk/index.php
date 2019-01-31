@@ -53,7 +53,7 @@
                             <a href="#" class="fa fa-download fa-lg" style="color:black"></a>
                             <a href="#" class="fa fa-search-plus fa-lg"></a>
                             <a href="#" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
-                            <a href="<?= base_url(); ?>/suratmasuk/hapus/<?= $sm['id']; ?>" class="fa fa-trash fa-lg" style="color:red"></a>
+                            <a href="<?= base_url(); ?>/suratmasuk/hapus/<?= $sm['id']; ?>" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
                         </th>
                         <th><?= $sm['nomor_surat']; ?></th> 
                         <th><?= $sm['tanggal_surat']; ?></th>
