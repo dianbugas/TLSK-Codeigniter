@@ -35,8 +35,40 @@
                     <th scope="col">Surat</th>
                     <th scope="col"><?= $suratmasuk['surat']; ?></th>
                 </tr>
+                <div class="row">
+                <div class="col-lg-6">
+                <div class="form-group">
+                <label>Tgl Awal</label>
+                <div class="input-group date">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                    <input placeholder="masukkan tanggal Awal" type="text" class="form-control datepicker" name="tgl_awal">
+                </div>
+                </div>
+                <div class="form-group">
+                <label>Tgl Akhir</label>
+                <div class="input-group date">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                    <input placeholder="masukkan tanggal Akhir" type="text" class="form-control datepicker" name="tgl_akhir">
+                </div>
+                </div>
+                </div>
+</div>
             </table>
             <a href="<?= base_url(); ?>suratmasuk/" class="card-link btn btn-primary">Kembali</a>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+ $(function(){
+  $(".datepicker").datepicker({
+      format: 'yyyy-mm-dd',
+      autoclose: true,
+      todayHighlight: true,
+  });
+ });
+</script>
