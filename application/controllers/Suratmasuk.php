@@ -52,29 +52,29 @@ class Suratmasuk extends CI_Controller
         $data['judul'] = 'Edit Data Surat Masuk';
         $data['suratmasuk'] = $this->Suratmasuk_model->getSuratMasukById($id);
 
-        $this->form_validation->get_rules('nomor_surat', 'Nomor Surat', 'required');
-        $this->form_validation->get_rules('tanggal_surat', 'Tanggal Surat', 'required');
-        $this->form_validation->get_rules('tanggal_terima', 'Tanggal Terima', 'required');
-        $this->form_validation->get_rules('dari', 'Dari', 'required');
-        $this->form_validation->get_rules('perihal', 'Perihal', 'required');
-        $this->form_validation->get_rules('lampiran', 'Lampiran', 'required');
-        $this->form_validation->get_rules('surat', 'Surat', 'required');
+        $this->form_validation->set_rules('nomor_surat', 'Nomor Surat', 'required');
+        $this->form_validation->set_rules('tanggal_surat', 'Tanggal Surat', 'required');
+        $this->form_validation->set_rules('tanggal_terima', 'Tanggal Terima', 'required');
+        $this->form_validation->set_rules('dari', 'Dari', 'required');
+        $this->form_validation->set_rules('perihal', 'Perihal', 'required');
+        $this->form_validation->set_rules('lampiran', 'Lampiran', 'required');
+        $this->form_validation->set_rules('surat', 'Surat', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('suratmasuk/edit', $data);
             $this->load->view('templates/footer');
         } else {
-            $this->Suratmasuk->editDataSuratMasuk($id);
+            $this->Suratmasuk_model->editDataSuratMasuk($id);
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('suratmasuk');
         }
     }
 
-    public function lengkap($id)
+    public function detail($id)
     {
         $data['judul'] = 'Detail Surat Masuk';
-        $data['suratmasuk'] = $this->Suratmasuk_model->getMasukById();
+        $data['suratmasuk'] = $this->Suratmasuk_model->getSuratMasukById($id);
         $this->load->view('templates/header', $data);
         $this->load->view('suratmasuk/detail', $data);
         $this->load->view('templates/footer');

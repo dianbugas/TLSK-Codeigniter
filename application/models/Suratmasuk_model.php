@@ -26,8 +26,25 @@ class Suratmasuk_model extends CI_Model
         $this->db->delete('suratmasuk', ['id' => $id]);
     }
 
-    public function getMasukById($id)
+    public function getSuratMasukById($id)
     {
         return $this->db->get_where('suratmasuk', ['id' => $id])->row_array();
+    }
+
+    public function editDataSuratMasuk()
+    {
+        $data = [
+            "nomor_surat" => $this->input->post('nomor_surat', true),
+            "tanggal_surat" => $this->input->post('tanggal_surat', true),
+            "tanggal_terima" => $this->input->post('tanggal_terima', true),
+            "dari" => $this->input->post('dari', true),
+            "perihal" => $this->input->post('perihal', true),
+            "lampiran" => $this->input->post('lampiran', true),
+            "surat" => $this->input->post('surat', true)
+        ];
+
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('suratmasuk', $data);
+
     }
 }
