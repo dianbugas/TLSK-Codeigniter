@@ -1,5 +1,5 @@
 <?php 
-class Suratmasul_model extends CI_Model
+class Suratmasuk_model extends CI_Model
 {
     public function getAllSuratMasuk()
     {
