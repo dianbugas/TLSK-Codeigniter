@@ -14,12 +14,12 @@
     <?php endif; ?> 
     <div class="row mt-3">
         <div class="col-md-6">
-            <a href="<?= base_url(); ?>suratmasuk/tambah" class="btn btn-primary">Tambah Data Mahasiswa</a>
+            <a href="<?= base_url(); ?>suratmasuk/tambah" class="btn btn-primary">Tambah Data</a>
         </div>
         <div class="col-md-6">
         <form action="" method="post">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Cari data mahasiswa" name="keyword">
+            <input type="text" class="form-control" placeholder="Cari Data Surat Masuk" name="keyword">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="submit">Cari</button>
                 </div>
@@ -35,15 +35,12 @@
             <table class="table table-striped table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                    <tr>
-                        <th scope="col md-3">no</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Nomor Surat</th>
-                        <th scope="col">Tanggal Surat</th>
-                        <th scope="col">Dari</th>
-                        <th scope="col">Prihal</th>
-                        <th scope="col">surat</th>
-                        </tr>
+                        <th scope="col md-3" class="text-center">no</th>
+                        <th scope="col" class="text-center">Status</th>
+                        <th scope="col" class="text-center">Nomor Surat</th>
+                        <th scope="col" class="text-center">Tanggal Surat</th>
+                        <th scope="col" class="text-center">Dari</th>
+                        <th scope="col" class="text-center">Prihal</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,21 +48,17 @@
                     $no = 1;
                     foreach ($suratmasuk as $sm) : ?>
                     <tr>
-                        <th><?= $no++; ?></th>
+                        <th class="text-center"><?= $no++; ?></th>
                         <th>
-                            <a href="#" class="badge badge-danger float-right ml-1 tombol-hapus">Hapus</a>
-                            <a href="#" class="badge badge-success float-right ml-1">Ubah</a>
-                            <a href="#" class="badge badge-primary float-right ml-1">Detail</a>
-                            <a href="#" class="icon fa fa-search-plus bigger-120" data-rel="tooltip" title="View">
-                                
-												
-											</a>
+                            <a href="#" class="fa fa-download fa-lg" style="color:black"></a>
+                            <a href="#" class="fa fa-search-plus fa-lg"></a>
+                            <a href="#" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
+                            <a href="<?= base_url(); ?>/suratmasuk/hapus/<?= $sm['id']; ?>" class="fa fa-trash fa-lg" style="color:red"></a>
                         </th>
                         <th><?= $sm['nomor_surat']; ?></th> 
                         <th><?= $sm['tanggal_surat']; ?></th>
                         <th><?= $sm['dari']; ?></th>
                         <th><?= $sm['perihal']; ?></th>   
-                        <th><?= $sm['surat']; ?></th>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
