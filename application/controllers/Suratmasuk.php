@@ -12,6 +12,9 @@ class Suratmasuk extends CI_Controller
     {
         $data['judul'] = 'Surat Masuk';
         $data['suratmasuk'] = $this->Suratmasuk_model->getAllSuratMasuk();
+        if ($this->input->post('keyword')) {
+            $data['suratmasuk'] = $this->Suratmasuk_model->cariDataSuratMasuk();
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('suratmasuk/index', $data);
         $this->load->view('templates/footer');

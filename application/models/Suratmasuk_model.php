@@ -45,6 +45,18 @@ class Suratmasuk_model extends CI_Model
 
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('suratmasuk', $data);
+    }
 
+    public function cariDataSuratMasuk()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('nomor_surat', $keyword);
+        $this->db->like('tanggal_surat', $keyword);
+        $this->db->like('tanggal_terima', $keyword);
+        $this->db->like('dari', $keyword);
+        $this->db->like('perihal', $keyword);
+        $this->db->like('lampiran', $keyword);
+        $this->db->like('surat', $keyword);
+        return $this->db->get('suratmasuk')->result_array();
     }
 }
