@@ -39,7 +39,7 @@
                         </div>
                         <div class="form-group">
                             <label for="surat">Surat</label>
-                            <input type="text" name="surat" class="form-control" id="surat">
+                            <input type="file" name="surat" class="form-control" id="surat">
                             <small class="form-text text-danger"><?= form_error('surat'); ?></small>
                         </div>
 

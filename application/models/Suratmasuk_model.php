@@ -59,4 +59,16 @@ class Suratmasuk_model extends CI_Model
         $this->db->or_like('surat', $keyword);
         return $this->db->get('suratmasuk')->result_array();
     }
+
+    public function save()
+    {
+        $post = $this->input->post();
+        $this->surat = uniqid();
+        $this->name = $post["name"];
+        $this->price = $post["price"];
+        $this->surat = $this->_uploadImage();
+        $this->description = $post["description"];
+        $this->db->insert($this->_table, $this);
+    }
+
 }
