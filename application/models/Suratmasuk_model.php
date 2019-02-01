@@ -51,12 +51,12 @@ class Suratmasuk_model extends CI_Model
     {
         $keyword = $this->input->post('keyword', true);
         $this->db->like('nomor_surat', $keyword);
-        $this->db->like('tanggal_surat', $keyword);
-        $this->db->like('tanggal_terima', $keyword);
-        $this->db->like('dari', $keyword);
-        $this->db->like('perihal', $keyword);
-        $this->db->like('lampiran', $keyword);
-        $this->db->like('surat', $keyword);
+        $this->db->or_like('tanggal_surat', $keyword);
+        $this->db->or_like('tanggal_terima', $keyword);
+        $this->db->or_like('dari', $keyword);
+        $this->db->or_like('perihal', $keyword);
+        $this->db->or_like('lampiran', $keyword);
+        $this->db->or_like('surat', $keyword);
         return $this->db->get('suratmasuk')->result_array();
     }
 }
