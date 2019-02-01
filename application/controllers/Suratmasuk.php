@@ -86,10 +86,10 @@ class Suratmasuk extends CI_Controller
     public function _uploadImage()
     {
         $config['upload_path'] = './upload/file/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'pdf|jpg|png';
         $config['file_name'] = $this->surat;
         $config['overwrite'] = true;
-        $config['max_size'] = 1024; // 1MB
+        $config['max_size'] = 3024; // 1MB
     // $config['max_width']            = 1024;
     // $config['max_height']           = 768;
 
