@@ -35,8 +35,8 @@
                             Buku Agenda
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Disposisi</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Verifikasi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Surat Masuk</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Surat Keluar</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -65,8 +65,9 @@
                             Admin
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Disposisi</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Verifikasi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Profile</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Ubah Password</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Logout</a>
                         </div>
                     </div>
         </div>    
