@@ -17,19 +17,58 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#">Matla'ul Anwar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="#">TLSK</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="<?= base_url(); ?>">About</a>
-                <a class="nav-item nav-link" href="<?= base_url(); ?>mahasiswa">Mahasiswa</a>
-                <a class="nav-item nav-link" href="<?= base_url(); ?>ustadz">Ustadz</a>
-                <a class="nav-item nav-link" href="<?= base_url(); ?>guru">Guru</a>
+                    <a class="nav-item nav-link active" href="<?= base_url(); ?>">Beranda<span class="sr-only">(current)</span></a>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Transaksi Surat
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Surat Masuk</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Surat Keluar</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Buku Agenda
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Disposisi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Verifikasi</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Laporan
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Disposisi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Verifikasi</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pengaturan
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Instansi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Users</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Divisi</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+             <div class="dropdown justify-content-end">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Disposisi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Verifikasi</a>
+                        </div>
+                    </div>
         </div>    
     </nav>
     
