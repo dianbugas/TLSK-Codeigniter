@@ -17,10 +17,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#">TLSK</a>
+            <a class="navbar-brand" href="<?= base_url(); ?>home">TLSK</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="<?= base_url(); ?>">Beranda<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="<?= base_url(); ?>home">Beranda<span class="sr-only">(current)</span></a>
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Transaksi Surat
