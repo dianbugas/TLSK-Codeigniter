@@ -59,4 +59,28 @@ class Suratkeluar extends CI_Controller
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('suratkeluar');
     }
+
+    public function edit($id)
+    {
+        $data['judul'] = 'Edit Data Surat Keluar';
+        $data['suratkeluar'] = $this->Suratkeluar_model->getSuratKeluarById($id);
+
+        $this->form_validation->set_rules('nomor_surat', 'Nomor Surat', 'required');
+        $this->form_validation->set_rules('tanggal_surat', 'Tanggal Surat', 'required');
+        $this->form_validation->set_rules('dari', 'Dari', 'required');
+        $this->form_validation->set_rules('kepada', 'Kepada', 'required');
+        $this->form_validation->set_rules('perihal', 'Perihal', 'required');
+        $this->form_validation->set_rules('lampiran', 'Lampiran', 'required');
+        $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
+        $this->form_validation->set_rules('surat', 'Surat', 'required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('suratmasuk/edit', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $this->Suratmasuk_model->editDataSuratkeluar($id);
+            $this->session->set_flashdata('flash', 'Diubah');
+            redirect('suratkeluar');
+        }
+    }
 }
