@@ -56,7 +56,7 @@ class Suratkeluar extends CI_Controller
     public function hapus($id)
     {
         $this->Suratkeluar_model->hapusDataSuratKeluar($id);
-
+        $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('suratkeluar');
     }
-
 }

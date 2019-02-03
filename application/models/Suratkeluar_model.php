@@ -25,4 +25,9 @@ class Suratkeluar_model extends CI_Model
     {
         return $this->db->get_where('suratkeluar', ['id' => $id])->row_array();
     }
+
+    public function hapusDataSuratKeluar($id)
+    {
+        $this->db->delete('suratkeluar', ['id' => $id]);
+    }
 }
