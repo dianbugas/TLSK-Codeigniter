@@ -75,12 +75,31 @@ class Suratkeluar extends CI_Controller
         $this->form_validation->set_rules('surat', 'Surat', 'required');
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
-            $this->load->view('suratmasuk/edit', $data);
+            $this->load->view('suratkeluar/edit', $data);
             $this->load->view('templates/footer');
         } else {
             $this->Suratmasuk_model->editDataSuratkeluar($id);
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('suratkeluar');
         }
+    }
+
+    public function _uploadImage()
+    {
+        $config['upload_path'] = './upload/file/';
+        $config['allowed_types'] = 'pdf|jpg|png';
+        $config['file_name'] = $this->surat;
+        $config['overwrite'] = true;
+        $config['max_size'] = 3024; // 1MB
+    // $config['max_width']            = 1024;
+    // $config['max_height']           = 768;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('surat')) {
+            return $this->upload->data("file_name");
+        }
+
+        return "default.jpg";
     }
 }

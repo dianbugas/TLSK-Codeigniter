@@ -47,4 +47,15 @@ class Suratkeluar_model extends CI_Model
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('suratkeluar', $data);
     }
+
+    public function save()
+    {
+        $post = $this->input->post();
+        $this->surat = uniqid();
+        $this->name = $post["name"];
+        $this->price = $post["price"];
+        $this->surat = $this->_uploadImage();
+        $this->description = $post["description"];
+        $this->db->insert($this->_table, $this);
+    }
 }
