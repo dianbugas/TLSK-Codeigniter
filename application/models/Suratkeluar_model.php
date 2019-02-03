@@ -10,7 +10,7 @@ class Suratkeluar_model extends CI_Model
     {
         $data = [
             "nomor_surat" => $this->input->post('nomor_surat', true),
-            "tanggal_surat" => $this->input0 > post('tanggal_surat', true),
+            "tanggal_surat" => $this->input->post('tanggal_surat', true),
             "dari" => $this->input->post('dari', true),
             "kepada" => $this->input->post('kepada', true),
             "perihal" => $this->input->post('perihal', true),
@@ -19,5 +19,10 @@ class Suratkeluar_model extends CI_Model
             "surat" => $this->input->post('surat', true)
         ];
         $this->db->insert('suratkeluar', $data);
+    }
+
+    public function getSuratKeluarById($id)
+    {
+        return $this->db->get_where('suratkeluar', ['id' => $id])->row_array();
     }
 }

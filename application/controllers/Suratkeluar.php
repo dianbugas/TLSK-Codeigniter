@@ -44,4 +44,13 @@ class Suratkeluar extends CI_Controller
         }
     }
 
+    public function detail($id)
+    {
+        $data['judul'] = 'Detail Surat Keluar';
+        $data['suratkeluar'] = $this->Suratkeluar_model->getSuratKeluarById($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('suratkeluar/detail', $data);
+        $this->load->view('templates/footer');
+    }
+
 }
