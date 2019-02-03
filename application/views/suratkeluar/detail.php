@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col md-6">
-            <h3>Data Surat Surat</h3>
+            <h3>Data Surat Surat     </h3>
             <table class="table table-striped table-bordered">
                 <tr>
                     <th scope="col">Nomor Surat</th>

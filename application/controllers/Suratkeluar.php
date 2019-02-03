@@ -53,4 +53,10 @@ class Suratkeluar extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function hapus($id)
+    {
+        $this->Suratkeluar_model->hapusDataSuratKeluar($id);
+
+    }
+
 }
