@@ -58,4 +58,18 @@ class Suratkeluar_model extends CI_Model
         $this->description = $post["description"];
         $this->db->insert($this->_table, $this);
     }
+
+    public function cariDataSuratKeluar()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('nomor_surat', $keyword);
+        $this->db->or_like('tanggal_surat', $keyword);
+        $this->db->or_like('dari', $keyword);
+        $this->db->or_like('kepada', $keyword);
+        $this->db->or_like('perihal', $keyword);
+        $this->db->or_like('lampiran', $keyword);
+        $this->db->or_like('keterangan', $keyword);
+        $this->db->or_like('surat', $keyword);
+        return $this->db->get('suratkeluar')->result_array();
+    }
 }
