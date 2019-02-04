@@ -5,13 +5,16 @@ class Disposisi extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Disposisi_model');
-        $this->load->helper('form_validation');
+        $this->load->library('form_validation');
     }
 
     public function index()
     {
         $data['judul'] = 'Daftar Disposisi';
         $data['disposisi'] = $this->Disposisi_model->getAllDisposisi();
+        if ($this->input->post('keyword')) {
+            $data['disposisi'] = $this->Disposisi_model->cariDataDisposisi();
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('disposisi/index', $data);
         $this->load->view('templates/footer');
@@ -37,7 +40,7 @@ class Disposisi extends CI_Controller
     public function detail($id)
     {
         $data['judul'] = 'Detail Dispoisi';
-        $data['disposisi'] = $this->Disposisi_model->getDataDisposisiById($id);
+        $data['disposisi'] = $this->Disposisi_model->getDisposisiById($id);
         $this->load->view('templates/header', $data);
         $this->load->view('disposisi/detail', $data);
         $this->load->view('templates/footer');

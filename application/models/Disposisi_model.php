@@ -8,11 +8,16 @@ class Disposisi_model extends CI_Model
 
     public function tambahDataDisposisi()
     {
-        $this
+        $data = [
+            "iddivisi" => $this->input->post('iddivisi', true),
+            "keterangan" => $this->input->post('keterangan', true),
+            "idsuratmasuk" => $this->input->post('idsuratmasuk', true)
+        ];
+        $this->db->insert('disposisi', $data);
     }
 
-    public function getDataDisposisiById($id)
+    public function getDisposisiById($id)
     {
-        return $this->db->get_where('disposisi', ['id' => $id])->result_array();
+        return $this->db->get_where('disposisi', ['id' => $id])->row_array();
     }
 }
