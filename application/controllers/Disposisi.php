@@ -37,15 +37,6 @@ class Disposisi extends CI_Controller
         }
     }
 
-    public function detail($id)
-    {
-        $data['judul'] = 'Detail Dispoisi';
-        $data['disposisi'] = $this->Disposisi_model->getDisposisiById($id);
-        $this->load->view('templates/header', $data);
-        $this->load->view('disposisi/detail', $data);
-        $this->load->view('templates/footer');
-    }
-
     public function edit($id)
     {
         $data['judul'] = 'Detail Disposisi';
@@ -64,11 +55,19 @@ class Disposisi extends CI_Controller
         }
     }
 
+    public function detail($id)
+    {
+        $data['judul'] = 'Detail Dispoisi';
+        $data['disposisi'] = $this->Disposisi_model->getDisposisiById($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('disposisi/detail', $data);
+        $this->load->view('templates/footer');
+    }
+
     public function hapus($id)
     {
         $this->Diposisi_model->hapusDataDisposisi($id);
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('disposisi');
-
     }
 }

@@ -16,11 +16,6 @@ class Disposisi_model extends CI_Model
         $this->db->insert('disposisi', $data);
     }
 
-    public function getDisposisiById($id)
-    {
-        return $this->db->get_where('disposisi', ['id' => $id])->row_array();
-    }
-
     public function editDataDisposisi($id)
     {
         $data = [
@@ -30,6 +25,11 @@ class Disposisi_model extends CI_Model
         ];
         $this->db->where('id', $this->input->post($id));
         $this->db->update('disposisi', $data);
+    }
+
+    public function getDisposisiById($id)
+    {
+        return $this->db->get_where('disposisi', ['id' => $id])->row_array();
     }
 
     public function hapusDataDisposisi($id)

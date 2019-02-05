@@ -43,13 +43,6 @@ class Suratmasuk extends CI_Controller
         }
     }
 
-    public function hapus($id)
-    {
-        $this->Suratmasuk_model->hapusDataSuratMasuk($id);
-        $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('suratmasuk');
-    }
-
     public function edit($id)
     {
         $data['judul'] = 'Edit Data Surat Masuk';
@@ -81,6 +74,13 @@ class Suratmasuk extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('suratmasuk/detail', $data);
         $this->load->view('templates/footer');
+    }
+
+    public function hapus($id)
+    {
+        $this->Suratmasuk_model->hapusDataSuratMasuk($id);
+        $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('suratmasuk');
     }
 
     public function _uploadImage()

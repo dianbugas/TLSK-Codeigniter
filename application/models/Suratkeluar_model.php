@@ -21,16 +21,6 @@ class Suratkeluar_model extends CI_Model
         $this->db->insert('suratkeluar', $data);
     }
 
-    public function getSuratKeluarById($id)
-    {
-        return $this->db->get_where('suratkeluar', ['id' => $id])->row_array();
-    }
-
-    public function hapusDataSuratKeluar($id)
-    {
-        $this->db->delete('suratkeluar', ['id' => $id]);
-    }
-
     public function editDataSuratKeluar($id)
     {
         $data = [
@@ -46,6 +36,16 @@ class Suratkeluar_model extends CI_Model
 
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('suratkeluar', $data);
+    }
+
+    public function getSuratKeluarById($id)
+    {
+        return $this->db->get_where('suratkeluar', ['id' => $id])->row_array();
+    }
+
+    public function hapusDataSuratKeluar($id)
+    {
+        $this->db->delete('suratkeluar', ['id' => $id]);
     }
 
     public function save()

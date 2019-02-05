@@ -44,22 +44,6 @@ class Suratkeluar extends CI_Controller
         }
     }
 
-    public function detail($id)
-    {
-        $data['judul'] = 'Detail Surat Keluar';
-        $data['suratkeluar'] = $this->Suratkeluar_model->getSuratKeluarById($id);
-        $this->load->view('templates/header', $data);
-        $this->load->view('suratkeluar/detail', $data);
-        $this->load->view('templates/footer');
-    }
-
-    public function hapus($id)
-    {
-        $this->Suratkeluar_model->hapusDataSuratKeluar($id);
-        $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('suratkeluar');
-    }
-
     public function edit($id)
     {
         $data['judul'] = 'Edit Data Surat Keluar';
@@ -82,6 +66,22 @@ class Suratkeluar extends CI_Controller
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('suratkeluar');
         }
+    }
+
+    public function detail($id)
+    {
+        $data['judul'] = 'Detail Surat Keluar';
+        $data['suratkeluar'] = $this->Suratkeluar_model->getSuratKeluarById($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('suratkeluar/detail', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function hapus($id)
+    {
+        $this->Suratkeluar_model->hapusDataSuratKeluar($id);
+        $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('suratkeluar');
     }
 
     public function _uploadImage()

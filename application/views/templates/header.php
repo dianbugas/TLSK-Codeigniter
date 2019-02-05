@@ -45,7 +45,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="<?= base_url(); ?>disposisi">Disposisi</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Verifikasi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>verifikasi">Verifikasi</a>
                         </div>
                     </div>
                     <div class="dropdown">

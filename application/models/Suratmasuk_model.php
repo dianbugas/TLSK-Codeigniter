@@ -21,16 +21,6 @@ class Suratmasuk_model extends CI_Model
         $this->db->insert('suratmasuk', $data);
     }
 
-    public function hapusDataSuratMasuk($id)
-    {
-        $this->db->delete('suratmasuk', ['id' => $id]);
-    }
-
-    public function getSuratMasukById($id)
-    {
-        return $this->db->get_where('suratmasuk', ['id' => $id])->row_array();
-    }
-
     public function editDataSuratMasuk()
     {
         $data = [
@@ -45,6 +35,16 @@ class Suratmasuk_model extends CI_Model
 
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('suratmasuk', $data);
+    }
+
+    public function getSuratMasukById($id)
+    {
+        return $this->db->get_where('suratmasuk', ['id' => $id])->row_array();
+    }
+
+    public function hapusDataSuratMasuk($id)
+    {
+        $this->db->delete('suratmasuk', ['id' => $id]);
     }
 
     public function cariDataSuratMasuk()
