@@ -45,4 +45,22 @@ class Disposisi extends CI_Controller
         $this->load->view('disposisi/detail', $data);
         $this->load->view('templates/footer');
     }
+
+    public function edit($id)
+    {
+        $data['judul'] = 'Detail Disposisi';
+        $data['disposisi'] = $this->Disposisi_model->getDisposisiById($id);
+        $this->form_validation->set_rules('iddivisi', 'Divisi', 'required');
+        $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
+        $this->form_validation->set_rules('disuratmasuk', 'Surat Masuk', 'required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('disposisi/edit', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $this->Suratmasuk_model->editDataDisposisi($id);
+            $this->session->set_flashdata('flash', 'Diubah');
+            redirect('disposisi');
+        }
+    }
 }
