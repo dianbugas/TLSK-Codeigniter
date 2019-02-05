@@ -32,4 +32,9 @@ class Verifikasi_model extends CI_Model
     {
         return $this->db->get_where('verifikasi', ['id' => $id])->row_array();
     }
+
+    public function hapusDataVerifikasi($id)
+    {
+        $this->db->delete('verifikasi', ['id' => $id]);
+    }
 }
