@@ -60,7 +60,7 @@ class Verifikasi extends CI_Controller
     public function detail($id)
     {
         $data['judul'] = 'Detail Data Verifikasi';
-        $data['verifikasi'] = $this->Verifikasi_model->getDataVerifikasiById($id);
+        $data['verifikasi'] = $this->Verifikasi_model->getVerifikasiById($id);
         $this->load->view('templates/header', $data);
         $this->load->view('verifikasi/detail', $data);
         $this->load->view('templates/footer');
