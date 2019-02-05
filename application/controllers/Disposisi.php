@@ -63,4 +63,12 @@ class Disposisi extends CI_Controller
             redirect('disposisi');
         }
     }
+
+    public function hapus($id)
+    {
+        $this->Diposisi_model->hapusDataDisposisi($id);
+        $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('disposisi');
+
+    }
 }

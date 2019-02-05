@@ -18,7 +18,7 @@
                         <div class="form-group row">
                             <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
                             <div class="col-sm-7">
-                            <input type="text" name="keterangan" class="form-control" id="datepicker4" width="260" value="<?= $disposisi['keterangan']; ?>">
+                            <input type="text" name="keterangan" class="form-control" id="keterangan" value="<?= $disposisi['keterangan']; ?>">
                             <small class="form-text text-danger"><?= form_error('keterangan'); ?></small>
                             </div>
                         </div>
