@@ -55,8 +55,8 @@
                         <th>
                             <a href="#" class="fa fa-download fa-lg" style="color:black"></a>
                             <a href="#" class="fa fa-search-plus fa-lg"></a>
-                            <a href="#" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
-                            <a href="#" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
+                            <a href="<?= base_url(); ?>divisi/edit/<?= $div['id']; ?>" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
+                            <a href="<?= base_url(); ?>divisi/hapus/<?= $div['id']; ?>" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
                         </th>
                         <th><?= $div['divisi']; ?></th> 
                         <th><?= $div['nama']; ?></th> 

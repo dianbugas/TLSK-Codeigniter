@@ -12,9 +12,9 @@ class Divisi extends CI_Controller
     {
         $data['judul'] = 'Daftar Divisi';
         $data['divisi'] = $this->Divisi_model->getAllDataDivisi();
-        if ($this->input->post('keyword')) {
-            $data['divisi'] = $this->Divisi_model->cariDataDivisi();
-        }
+        // if ($this->input->post('keyword')) {
+        //     $data['divisi'] = $this->Divisi_model->cariDataDivisi();
+        // }
         $this->load->view('templates/header', $data);
         $this->load->view('divisi/index', $data);
         $this->load->view('templates/footer');
@@ -31,7 +31,7 @@ class Divisi extends CI_Controller
             $this->load->view('divisi/tambah');
             $this->load->view('templates/footer');
         } else {
-            $this->Suratkeluar_model->tambahDataDivisi();
+            $this->Divisi_model->tambahDataDivisi();
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('divisi');
         }
@@ -50,7 +50,7 @@ class Divisi extends CI_Controller
             $this->load->view('divisi/edit', $data);
             $this->load->view('templates/footer');
         } else {
-            $this->Suratmasuk_model->editDataDivisi($id);
+            $this->Divisi_model->editDataDivisi($id);
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('divisi');
         }
@@ -68,7 +68,7 @@ class Divisi extends CI_Controller
 
     public function hapus($id)
     {
-        $this->Suratkeluar_model->hapusDataDivisi($id);
+        $this->Divisi_model->hapusDataDivisi($id);
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('divisi');
     }
