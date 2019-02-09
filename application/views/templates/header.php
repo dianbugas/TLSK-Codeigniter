@@ -53,14 +53,14 @@
                             Pengaturan
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Instansi</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Users</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Divisi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>instansi">Instansi</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>users">Users</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>divisi">Divisi</a>
                         </div>
                     </div>
                 </div>
             </div>
-             <div class="dropdown justify-content-end">
+            <div class="dropdown justify-content-end">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Admin
                         </button>

@@ -102,4 +102,5 @@ class Suratkeluar extends CI_Controller
 
         return "default.jpg";
     }
+
 }

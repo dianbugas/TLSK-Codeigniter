@@ -23,7 +23,7 @@ class Disposisi extends CI_Controller
     public function tambah()
     {
         $data['judul'] = 'Tambah Data Disposisi';
-        $this->form_validation->set_rules('iddivisi', 'Divisi', 'required');
+        $this->form_validation->set_rules('divisi', 'Divisi', 'required');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
         $this->form_validation->set_rules('disuratmasuk', 'Surat Masuk', 'required');
         if ($this->form_validation->run() == false) {
