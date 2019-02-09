@@ -12,9 +12,9 @@ class Divisi extends CI_Controller
     {
         $data['judul'] = 'Daftar Divisi';
         $data['divisi'] = $this->Divisi_model->getAllDataDivisi();
-        // if ($this->input->post('keyword')) {
-        //     $data['divisi'] = $this->Divisi_model->cariDataDivisi();
-        // }
+        if ($this->input->post('keyword')) {
+            $data['divisi'] = $this->Divisi_model->cariDataDivisi();
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('divisi/index', $data);
         $this->load->view('templates/footer');

@@ -28,7 +28,7 @@ class Disposisi extends CI_Controller
         $this->form_validation->set_rules('disuratmasuk', 'Surat Masuk', 'required');
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
-            $this->load->view('disposisi/tambah');
+            $this->load->view('disposisi/tambah', $data);
             $this->load->view('templates/footer');
         } else {
             $this->Disposis_model->tambahDataDisposisi();

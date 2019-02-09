@@ -35,4 +35,12 @@ class Divisi_model extends CI_Model
     {
         $this->db->delete('divisi', ['id' => $id]);
     }
+
+    public function cariDataDivisi()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('divisi', $keyword);
+        $this->db->or_like('nama', $keyword);
+        return $this->db->get('divisi')->result_array();
+    }
 }

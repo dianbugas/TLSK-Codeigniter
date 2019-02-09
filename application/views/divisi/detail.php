@@ -9,7 +9,7 @@
                 </tr>
                 <tr>
                     <th scope="col">Nama</th>
-                    <th scope="col"><?= $nama['nama']; ?></th>
+                    <th scope="col"><?= $divisi['nama']; ?></th>
                 </tr>
             </table>
             <a href="<?= base_url(); ?>divisi/" class="card-link btn btn-primary">Kembali</a>
