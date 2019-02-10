@@ -1,69 +1,62 @@
 <div class="container">
     <div class="row mt-4">
-                <div class="card-group">
-                    <div class="col-md-6">
-                        <div class="card text-white bg-danger">
-                            <div class="card-header">
-                                <h4>Surat Masuk</h3>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick </p>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="card text-white bg-success">
-                        <div class="card-header">
-                            <h4>Surat Keluar</h3>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Secondary card title</h5>
-                            <p class="card-text">Some quick </p>
-                        </div>
-                        </div>
-                        <div class="card text-white bg-info">
-                        <div class="card-header">Header</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Warning card title</h5>
-                            <p class="card-text">Some quick </p>
-                        </div>
-                        </div>
+        <div class="col md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Selamat Datang Muhammad Ardiansyah</h1>
+                    <h5>Anda login sebagai Super Admin. Anda memiliki akses penuh terhadap sistem.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col md-8">
+            <div class="card-deck">
+                <div class="card text-white bg-success">
+                    <div class="card-body">
+                        <h4><a href="#" class="fa fa-envelope fa-lg" style="color:white"></a>&nbsp;&nbsp;Jumlah Surat Masuk</h4>
+                        <h5><a href="#" class="text-white">1 Surat Masuk</a></h5>
                     </div>
                 </div>
-            
-    </div>
-</div>  
-    <!-- <div class="row mt-4">
-        <div class="col md-20"></div>
-            <div class="card-deck">
-                <div class="card-group">
-                    <div class="card text-white bg-primary md-3">
-                    <div class="card-header">
-                        <h4>Disposisi</h4>
-                    </div>
+                <div class="card text-white bg-primary">
                     <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick </p>
+                        <h4><a href="#" class="fa fa-send fa-lg" style="color:white"></a>&nbsp;&nbsp;Jumlah Surat Keluar</h4>
+                        <h5><a href="#" class="text-white">1 Surat Keluar</a></h5>
                     </div>
-                    </div>
-                    <div class="card text-white bg-secondary md-3">
-                    <div class="card-header">
-                        <h4>Verifikasi</h4>
-                    </div>
+                </div>
+                <div class="card text-white bg-danger">
                     <div class="card-body">
-                        <h5 class="card-title">Secondary card title</h5>
-                        <p class="card-text">Some quick </p>
-                    </div>
-                    </div>
-                    <div class="card text-white bg-warning md-3">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Warning card title</h5>
-                        <p class="card-text">Some quick </p>
-                    </div>
+                        <h4><a href="#" class="fa fa-comments-o fa-lg" style="color:white"></a>&nbsp;&nbsp;Memo</h4>
+                        <h5><a href="#" class="text-white">1 Memo</a></h5>
                     </div>
                 </div>
             </div>
         </div>
- -->
+    </div>
+
+    <div class="row mt-4">
+        <div class="col md-8">
+            <div class="card-deck">
+                <div class="card text-white bg-warning">
+                    <div class="card-body">
+                        <h4><a href="#" class="fa fa-file fa-lg" style="color:white"></a>&nbsp;&nbsp;Jumlah Disposisi</h4>
+                        <h5><a href="#" class="text-white">1 Disposisi</a></h5>
+                    </div>
+                </div>
+                <div class="card text-white bg-secondary">
+                    <div class="card-body">
+                        <h4><a href="#" class="fa fa-paste fa-lg" style="color:white"></a>&nbsp;&nbsp;Jumlah Verifikasi</h4>
+                        <h5><a href="#" class="text-white">1 Verifikasi</a></h5>
+                    </div>
+                </div>
+                <div class="card text-white bg-info">
+                    <div class="card-body">
+                        <h4><a href="#" class="fa fa-users fa-lg" style="color:white"></a>&nbsp;&nbsp;Jumlah Pengguna</h4>
+                        <h5><a href="#" class="text-white">1 Pengguna</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
 
