@@ -56,7 +56,6 @@ class Auth extends CI_Controller
         $this->User_model->update_role($user['id'], 1);
 
             //set sessiom
-
             //redirct profile
         redirect('profile');
     }
