@@ -67,6 +67,8 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Profile</a>
                             <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Ubah Password</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Login</a>
+                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Register</a>
                             <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Logout</a>
                         </div>
                     </div>

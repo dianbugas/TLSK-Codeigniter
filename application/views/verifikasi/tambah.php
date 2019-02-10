@@ -6,27 +6,30 @@
                     Form Tambah Data Verifikasi
                 </div>
                 <div class="card-body">
-                    <form action="" method='post'>
-                        <div class="form-group row">
+                    <form action="" method="post">
+                        <div class="form-group was-validated row ">
                             <div class="col-sm-2" for="persetujuan" name="persetujuan" id="persetujuan">
                                 Persetujuan
                             </div>
                             <div class="col md-10">
                             <div class="form-check">
                                 <div class="col md-6">
-                                    <input class="form-check-input" type="checkbox" for="persetujuan" name="persetujuan" id="persetujuan">
-                                    <label class="form-check-label" for="persetujuan" name="persetujuan" id="persetujuan">
-                                    Setuju
-                                    </label>
+                                    <div class="custom-control custom-checkbox">
+                                <input type="radio" class="custom-control-input" id="customControlValidation2" name="persetujuan" required>
+                                <label class="custom-control-label" for="customControlValidation2">Setuju</label>
+                            </div>
                                 </div>
                                 <div class="col md-4">
-                                    <input class="form-check-input" type="checkbox" for="persetujuan" name="persetujuan" id="persetujuan">
-                                    <label class="form-check-label" for="persetujuan" name="persetujuan" id="persetujuan">
-                                    Tidak Setuju
-                                    </label>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                <input type="radio" class="custom-control-input" id="customControlValidation3" name="persetujuan" required>
+                                <label class="custom-control-label" for="customControlValidation3">Tidak Setuju</label>
+                                <div class="invalid-feedback">More example invalid feedback text</div>
+                            </div>
                                 </div>
                             </div>
                             </div>
+                            
+                            
                         </div>
                         <div class="form-group row">
                             <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
