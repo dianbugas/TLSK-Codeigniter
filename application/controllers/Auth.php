@@ -11,8 +11,16 @@ class Auth extends CI_Controller
     public function register()
     {
         $data['judul'] = 'Halaman Register';
-        $this->load->view('templates/header', $data);
-        $this->load->view('auth/register', $data);
-        $this->load->view('templates/footer');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('password', 'password', 'required');
+        $this->form_validation->set_rules('password2', 'Konfirmasi Password', 'required|matches[password]');
+
+        if ($this->form_validation->run() === false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('auth/register', $data);
+            $this->load->view('templates/footer');
+        } else {
+            //user save
+        }
     }
 }
