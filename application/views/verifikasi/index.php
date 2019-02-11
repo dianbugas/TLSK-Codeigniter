@@ -55,7 +55,7 @@
                         <th class="text-center"><?= $no++; ?></th>
                         <th>
                             <a href="<?= base_url(); ?>verifikasi/detail/<?= $ver['id']; ?>" class="fa fa-search-plus fa-lg"></a>
-                            <a href="#" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
+                            <a href="<?= base_url(); ?>verifikasi/edit/<?= $ver['id']; ?>" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
                             <a href="#" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
                         </th>
                         <th><?= $ver['persetujuan']; ?></th> 

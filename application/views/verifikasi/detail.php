@@ -16,7 +16,7 @@
                     <th scope="col"><?= $verifikasi['idsuratkeluar']; ?></th>
                 </tr>
             </table>
-            <a href="<?= base_url(); ?>suratmasuk/" class="card-link btn btn-primary">Kembali</a>
+            <a href="<?= base_url(); ?>verifikasi/" class="card-link btn btn-primary">Kembali</a>
         </div>
     </div>
 </div>

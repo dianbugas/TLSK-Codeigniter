@@ -41,7 +41,7 @@ class Verifikasi extends CI_Controller
     public function edit($id)
     {
         $data['judul'] = 'Edit Data Verifikasi';
-        $data['verifikasi'] = $this->Verifikasi_model->getDataVerifikasiById($di);
+        $data['verifikasi'] = $this->Verifikasi_model->getVerifikasiById($id);
 
         $this->form_validation->set_rules('persetujuan', 'Persetujuan', 'required');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
