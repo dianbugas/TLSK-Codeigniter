@@ -41,7 +41,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col md-3" class="text-center">no</th>
-                        <th scope="col" class="text-center">Status</th>
+                        <th scope="col" class="text-center" width="100px">Status</th>
                         <th scope="col" class="text-center">Persetujuan</th>
                         <th scope="col" class="text-center">Keterangan</th>
                         <th scope="col" class="text-center">Surat Keluar</th>
@@ -54,8 +54,7 @@
                     <tr>
                         <th class="text-center"><?= $no++; ?></th>
                         <th>
-                            <a href="#" class="fa fa-download fa-lg" style="color:black"></a>
-                            <a href="#" class="fa fa-search-plus fa-lg"></a>
+                            <a href="<?= base_url(); ?>verifikasi/detail/<?= $ver['id']; ?>" class="fa fa-search-plus fa-lg"></a>
                             <a href="#" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
                             <a href="#" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
                         </th>

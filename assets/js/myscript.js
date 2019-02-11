@@ -1,7 +1,7 @@
 const flashData = $('.flash-data').data('flashdata');
 if (flashData) {
 	Swal({
-		title: 'Data Surat Masuk',
+		title: 'Data',
 		text: 'Berhasil ' + flashData,
 		type: 'success'
 	});
@@ -14,7 +14,7 @@ $('.tombol-hapus').on('click', function (e) {
 
 	Swal({
 		title: 'Apakah anda yakin',
-		text: "data surat masuk akan dihapus",
+		text: "Data akan dihapus",
 		type: 'warning',
 		showCancelButton: true,
 		confirmButtonColor: '#3085d6',
