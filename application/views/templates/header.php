@@ -65,11 +65,16 @@
                             Admin
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratmasuk">Profile</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Ubah Password</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Login</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Register</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>suratkeluar">Logout</a>
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Ubah Password</a>
+                            <a class="dropdown-item" href="register">Register</a>
+                            <? if (isset($_SESSION['logged_in'])) { ?>
+                            <a class="dropdown-item" href="logout">Logout</a>
+                            <?
+                        } else { ?>
+                            <a class="dropdown-item" href="login">Login</a>
+                            <?
+                        } ?>
                         </div>
                     </div>
         </div>    

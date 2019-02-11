@@ -35,7 +35,7 @@ class Auth extends CI_Controller
         $this->email->subject('register aplikasi auth local');
         $this->email->message("
                     Klik untuk konfirmasi pendaftaran
-                    <a href='http://localhost/surat/auth/verify/$email/$token'>Konfirmasi Email</a>
+                    <a href='http://localhost/surat/verify/$email/$token'>Konfirmasi Email</a>
                     ");
         $this->email->set_mailtype('html');
         $this->email->send();
@@ -55,8 +55,43 @@ class Auth extends CI_Controller
             //update user role
         $this->User_model->update_role($user['id'], 1);
 
-            //set sessiom
+            //set session
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['logged_in'] = true;
+        
             //redirct profile
         redirect('profile');
+    }
+
+    public function login()
+    {
+        $data['judul'] = 'Halaman Login';
+
+        if ($this->User_model->is_LoggedIn()) {
+            redirect('profile');
+        }
+
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('password', 'password', 'required');
+
+        if ($this->form_validation->run() === false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('auth/login');
+            $this->load->view('templates/footer');
+        } else {
+            $user = $this->User_model->get_user('email', $this->input->post('email'));
+        
+            // set session
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['logged_in'] = true;
+
+            redirect('profile');
+        }
+    }
+
+    public function logout()
+    {
+        unset($_SESSION['user_id'], $_SESSION['logged_in']);
+        redirect('login');
     }
 }

@@ -22,7 +22,7 @@ class User_model extends CI_Model
 
     public function get_user($key, $value)
     {
-        $query = $this->db->get_whare('users', array($key => $value));
+        $query = $this->db->get_where('users', array($key => $value));
         if (!empty($query->row_array())) {
             return $query->row_array();
         }
@@ -34,5 +34,14 @@ class User_model extends CI_Model
         $data = array('role' => $role_nr);
         $this->db->where('id', $user_id);
         return $this->db->update('users', $data);
+    }
+
+    public function is_LoggedIn()
+    {
+        if (!isset($_SESSION['logged_id '])) {
+            return false;
+        }
+
+        return true;
     }
 }
