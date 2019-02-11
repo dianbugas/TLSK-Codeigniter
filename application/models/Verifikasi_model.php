@@ -37,4 +37,13 @@ class Verifikasi_model extends CI_Model
     {
         $this->db->delete('verifikasi', ['id' => $id]);
     }
+
+    public function cariDataVerifikasi()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('persetujuan', $keyword);
+        $this->db->or_like('keterangan', $keyword);
+        $this->db->or_like('idsuratkeluar', $keyword);
+        return $this->db->get('verifikasi')->result_array();
+    }
 }

@@ -7,29 +7,15 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="post">
-                        <div class="form-group was-validated row ">
-                            <div class="col-sm-2" for="persetujuan" name="persetujuan" id="persetujuan">
-                                Persetujuan
+                        <div class="form-group row">
+                            <label for="persetujuan" class="col-sm-2 col-form-label">Persetujuan</label>
+                            <div class="col-sm-7">
+                                <select class="form-control" id="persetujuan" name="persetujuan">
+                                <div class="col-sm-7">
+                                    <option value="setuju">Setuju</option>
+                                    <option value="tidak setuju">Tidak Setuju</option>    
+                            </select>
                             </div>
-                            <div class="col md-10">
-                            <div class="form-check">
-                                <div class="col md-6">
-                                    <div class="custom-control custom-checkbox">
-                                <input type="radio" class="custom-control-input" id="customControlValidation2" name="persetujuan" required>
-                                <label class="custom-control-label" for="customControlValidation2">Setuju</label>
-                            </div>
-                                </div>
-                                <div class="col md-4">
-                                    <div class="custom-control custom-checkbox mb-3">
-                                <input type="radio" class="custom-control-input" id="customControlValidation3" name="persetujuan" required>
-                                <label class="custom-control-label" for="customControlValidation3">Tidak Setuju</label>
-                                <div class="invalid-feedback">More example invalid feedback text</div>
-                            </div>
-                                </div>
-                            </div>
-                            </div>
-                            
-                            
                         </div>
                         <div class="form-group row">
                             <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
