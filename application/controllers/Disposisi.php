@@ -23,15 +23,16 @@ class Disposisi extends CI_Controller
     public function tambah()
     {
         $data['judul'] = 'Tambah Data Disposisi';
-        $this->form_validation->set_rules('divisi', 'Divisi', 'required');
+        $this->form_validation->set_rules('iddivisi', 'Divisi', 'required');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
-        $this->form_validation->set_rules('disuratmasuk', 'Surat Masuk', 'required');
+        $this->form_validation->set_rules('idsuratmasuk', 'Surat Masuk', 'required');
+
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('disposisi/tambah', $data);
             $this->load->view('templates/footer');
         } else {
-            $this->Disposis_model->tambahDataDisposisi();
+            $this->Disposisi_model->tambahDataDisposisi();
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('disposisi');
         }
@@ -43,13 +44,13 @@ class Disposisi extends CI_Controller
         $data['disposisi'] = $this->Disposisi_model->getDisposisiById($id);
         $this->form_validation->set_rules('iddivisi', 'Divisi', 'required');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
-        $this->form_validation->set_rules('disuratmasuk', 'Surat Masuk', 'required');
+        $this->form_validation->set_rules('idsuratmasuk', 'Surat Masuk', 'required');
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('disposisi/edit', $data);
             $this->load->view('templates/footer');
         } else {
-            $this->Suratmasuk_model->editDataDisposisi($id);
+            $this->Disposisi_model->editDataDisposisi($id);
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('disposisi');
         }
@@ -66,7 +67,7 @@ class Disposisi extends CI_Controller
 
     public function hapus($id)
     {
-        $this->Diposisi_model->hapusDataDisposisi($id);
+        $this->Disposisi_model->hapusDataDisposisi($id);
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('disposisi');
     }

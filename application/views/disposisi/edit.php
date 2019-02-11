@@ -25,7 +25,7 @@
                         <div class="form-group row">
                             <label for="idsuratmasuk" class="col-sm-2 col-form-label">Surat Masuk</label>
                             <div class="col-sm-7">
-                            <input type="text" name="idsuratmasuk" class="form-control" id="idsuratmasuk" placeholder="Dari" value="<?= $disposisi['idsuratmasuk']; ?>">
+                            <input type="text" name="idsuratmasuk" class="form-control" id="idsuratmasuk" value="<?= $disposisi['idsuratmasuk']; ?>">
                             <small class="form-text text-danger"><?= form_error('idsuratmasuk'); ?></small>
                             </div>
                         </div>

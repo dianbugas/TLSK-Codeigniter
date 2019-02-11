@@ -4,7 +4,7 @@
             <h3>Detail Disposisi</h3>
             <table class="table table-striped table-bordered">
                 <tr>
-                    <th scope="col">Nomor Surat</th>
+                    <th scope="col" width="200px">Nomor Surat</th>
                     <th scope="col"><?= $disposisi['iddivisi']; ?></th>
                 </tr>
                 <tr>
