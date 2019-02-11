@@ -95,3 +95,4 @@ class Auth extends CI_Controller
         redirect('login');
     }
 }
+//masih error

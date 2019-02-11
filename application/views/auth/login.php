@@ -4,7 +4,7 @@
     
             <?= form_open('auth/login') ?>
             <div class="form-group">
-                <label for="">Email address</label>
+                <label for="">Email</label>
                 <?= form_error('email'); ?>
                 <input type="email" name="email" class="form-control" value="<?= set_value('email'); ?>" placeholder="Enter email">
             </div>
