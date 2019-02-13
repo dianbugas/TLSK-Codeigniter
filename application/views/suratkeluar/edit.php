@@ -46,10 +46,13 @@
                         <div class="form-group row">
                             <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
                             <div class="col-sm-7">
-                            <input type="text" name="keterangan" class="form-control" id="keterangan" value="<?= $suratkeluar['keterangan']; ?>">
-                            <small class="form-text text-danger"><?= form_error('keterangan'); ?></small>
+                                <textarea class="form-control <?= form_error('keterangan') ? 'is-invalid' : '' ?>"
+                                    name="keterangan"><?= $suratkeluar['keterangan']; ?></textarea>
+                                <div class="invalid-feedback">
+                                    <?= form_error('keterangan') ?>
+                                </div>
                             </div>
-                        </div>
+						</div>
                         <div class="form-group row">
                                 <label for="surat" class="col-sm-2 col-form-label">Surat</label>
                                 <div class="col-sm-7">
