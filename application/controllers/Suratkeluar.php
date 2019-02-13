@@ -57,12 +57,13 @@ class Suratkeluar extends CI_Controller
         $this->form_validation->set_rules('lampiran', 'Lampiran', 'required');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
         $this->form_validation->set_rules('surat', 'Surat', 'required');
+
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('suratkeluar/edit', $data);
             $this->load->view('templates/footer');
         } else {
-            $this->Suratmasuk_model->editDataSuratkeluar($id);
+            $this->Suratkeluar_model->editDataSuratKeluar($id);
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('suratkeluar');
         }
