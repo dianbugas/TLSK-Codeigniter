@@ -9,18 +9,5 @@
     <script src="<?= base_url(); ?>assets/plugin/js/bootstrap-datepicker.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/myscript.js"></script>    
     <script type="text/javascript">
-  $(function() {
-    $('#datepicker4').datepicker({
-      pickTime: false
-    });
-  });
-
-  $(function() {
-    $('#datepicker3').datepicker({
-      pickTime: false
-    });
-  });
-</script>
-
 </body>
 </html>

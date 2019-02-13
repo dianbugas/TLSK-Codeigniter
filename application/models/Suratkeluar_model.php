@@ -21,7 +21,7 @@ class Suratkeluar_model extends CI_Model
         $this->db->insert('suratkeluar', $data);
     }
 
-    public function editDataSuratKeluar($id)
+    public function editDataSuratKeluar()
     {
         $data = [
             "nomor_surat" => $this->input->post('nomor_surat', true),

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/plugin/css/bootstrap-datepicker.min.css">
 
     <title><?= $judul; ?></title>
 </head>

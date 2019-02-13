@@ -18,14 +18,14 @@
                         <div class="form-group row">
                             <label for="tanggal_surat" class="col-sm-2 col-form-label">Tanggal Surat</label>
                             <div class="col-sm-7">
-                            <input type="text" name="tanggal_surat" class="form-control" id="datepicker4" width="260" value="<?= $suratmasuk['tanggal_surat']; ?>">
+                            <input type="date" name="tanggal_surat" class="form-control"  value="<?= $suratmasuk['tanggal_surat']; ?>">
                             <small class="form-text text-danger"><?= form_error('tanggal_surat'); ?></small>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="tanggal_terima" class="col-sm-2 col-form-label">Tanggal Terima</label>
                             <div class="col-sm-7">
-                            <input type="text" name="tanggal_terima" class="form-control" id="datepicker3" width="260" value="<?= $suratmasuk['tanggal_terima']; ?>">
+                            <input type="date" name="tanggal_terima" class="form-control"  value="<?= $suratmasuk['tanggal_terima']; ?>">
                             <small class="form-text text-danger"><?= form_error('tanggal_terima'); ?></small>
                             </div>
                         </div>
@@ -51,21 +51,21 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="lampiran" class="col-sm-2 col-form-label">Keterangan</label>
-                            <div class="col-sm-7">
+                                <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
+                                <div class="col-sm-7">
 								<textarea class="form-control <?= form_error('keterangan') ? 'is-invalid' : '' ?>"
-								name="keterangan" placeholder="Keterangan..."></textarea>
+								name="keterangan"><?= $suratmasuk['keterangan']; ?></textarea>
 								<div class="invalid-feedback">
 									<?= form_error('keterangan') ?>
                                 </div>
-                            </div>
-						</div>
+                                </div>
+							</div>
                         <div class="form-group row">
-                                <label for="surat" class="col-sm-2 col-form-label">Surat</label>
-                                <div class="col-sm-7">
+                            <label for="surat" class="col-sm-2 col-form-label">Surat</label>
+                            <div class="col-sm-7">
                                 <input type="file" class="form-control-file" id="exampleFormControlFile1" name="surat" id="surat" value="<?= $suratmasuk['surat']; ?>">
                                 <small class="form-text text-danger"><?= form_error('surat'); ?></small>
-                                </div>
+                            </div>
                         </div>
                         <button type="submit" name="tambah" class="btn btn-primary">Tambah Data</button>
                     </form>

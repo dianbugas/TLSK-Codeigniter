@@ -18,7 +18,7 @@
                         <div class="form-group row">
                             <label for="tanggal_surat" class="col-sm-2 col-form-label">Tanggal Surat</label>
                             <div class="col-sm-7">
-                            <input type="text" name="tanggal_surat" class="form-control" id="datepicker4" width="260" value="<?= $suratkeluar['tanggal_surat']; ?>">
+                            <input type="date" name="tanggal_surat" class="form-control" value="<?= $suratkeluar['tanggal_surat']; ?>">
                             <small class="form-text text-danger"><?= form_error('tanggal_surat'); ?></small>
                             </div>
                         </div>
