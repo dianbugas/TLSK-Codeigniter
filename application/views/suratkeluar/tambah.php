@@ -52,16 +52,19 @@
                         <div class="form-group row">
                             <label for="lampiran" class="col-sm-2 col-form-label">Keterangan</label>
                             <div class="col-sm-7">
-                            <input type="text" name="keterangan" class="form-control" id="keterangan" placeholder="Keterangan" width="260">
-                            <small class="form-text text-danger"><?= form_error('lampiran'); ?></small>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                                <label for="surat" class="col-sm-2 col-form-label">Surat</label>
-                                <div class="col-sm-7">
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="surat" id="surat">
-                                <small class="form-text text-danger"><?= form_error('surat'); ?></small>
+								<textarea class="form-control <?= form_error('keterangan') ? 'is-invalid' : '' ?>"
+								name="keterangan" placeholder="Keterangan..."></textarea>
+								<div class="invalid-feedback">
+									<?= form_error('keterangan') ?>
                                 </div>
+                            </div>
+						</div>
+                        <div class="form-group row">
+                            <label for="surat" class="col-sm-2 col-form-label">Surat</label>
+                            <div class="col-sm-7">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="surat" id="surat">
+                            <small class="form-text text-danger"><?= form_error('surat'); ?></small>
+                            </div>
                         </div>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
                     </form>

@@ -30,6 +30,7 @@ class Suratmasuk extends CI_Controller
         $this->form_validation->set_rules('dari', 'Dari', 'required');
         $this->form_validation->set_rules('perihal', 'Perihal', 'required');
         $this->form_validation->set_rules('lampiran', 'Lampiran', 'required');
+        $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
         $this->form_validation->set_rules('surat', 'Surat', 'required');
 
         if ($this->form_validation->run() == false) {
@@ -54,6 +55,7 @@ class Suratmasuk extends CI_Controller
         $this->form_validation->set_rules('dari', 'Dari', 'required');
         $this->form_validation->set_rules('perihal', 'Perihal', 'required');
         $this->form_validation->set_rules('lampiran', 'Lampiran', 'required');
+        $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
         $this->form_validation->set_rules('surat', 'Surat', 'required');
 
         if ($this->form_validation->run() == false) {

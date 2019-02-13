@@ -15,6 +15,7 @@ class Suratmasuk_model extends CI_Model
             "dari" => $this->input->post('dari', true),
             "perihal" => $this->input->post('perihal', true),
             "lampiran" => $this->input->post('lampiran', true),
+            "keterangan" => $this->input->post('keterangan', true),
             "surat" => $this->input->post('surat', true)
         ];
 
@@ -30,6 +31,7 @@ class Suratmasuk_model extends CI_Model
             "dari" => $this->input->post('dari', true),
             "perihal" => $this->input->post('perihal', true),
             "lampiran" => $this->input->post('lampiran', true),
+            "keterangan" => $this->input->post('keterangan', true),
             "surat" => $this->input->post('surat', true)
         ];
 
@@ -56,6 +58,7 @@ class Suratmasuk_model extends CI_Model
         $this->db->or_like('dari', $keyword);
         $this->db->or_like('perihal', $keyword);
         $this->db->or_like('lampiran', $keyword);
+        $this->db->or_like('keterangan', $keyword);
         $this->db->or_like('surat', $keyword);
         return $this->db->get('suratmasuk')->result_array();
     }

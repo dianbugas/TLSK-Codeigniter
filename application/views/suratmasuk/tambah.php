@@ -50,6 +50,16 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="lampiran" class="col-sm-2 col-form-label">Keterangan</label>
+                            <div class="col-sm-7">
+								<textarea class="form-control <?= form_error('keterangan') ? 'is-invalid' : '' ?>"
+								name="keterangan" placeholder="Keterangan..."></textarea>
+								<div class="invalid-feedback">
+									<?= form_error('keterangan') ?>
+                                </div>
+                            </div>
+						</div>
+                        <div class="form-group row">
                                 <label for="surat" class="col-sm-2 col-form-label">Surat</label>
                                 <div class="col-sm-7">
                                 <input type="file" class="form-control-file" id="exampleFormControlFile1" name="surat" id="surat">
