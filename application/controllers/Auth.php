@@ -132,6 +132,7 @@ class Auth extends CI_Controller
     public function forgetPassword()
     {
         //mengirimkan email , link/email/token
+        //lewat facebook
     }
 
     public function resetPassword($value = '')
