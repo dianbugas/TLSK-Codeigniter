@@ -54,11 +54,11 @@
                             </div>
 						</div>
                         <div class="form-group row">
-                                <label for="surat" class="col-sm-2 col-form-label">Surat</label>
-                                <div class="col-sm-7">
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="surat" id="surat" value="<?= $suratkeluar['surat']; ?>">
-                                <small class="form-text text-danger"><?= form_error('surat'); ?></small>
-                                </div>
+                            <label for="surat" class="col-sm-2 col-form-label">Surat</label>
+                            <div class="col-sm-7">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="surat" id="surat" value="<?= $suratkeluar['surat']; ?>">
+                            <small class="form-text text-danger"><?= form_error('surat'); ?></small>
+                            </div>
                         </div>
                         <button type="submit" name="tambah" class="btn btn-primary">Tambah Data</button>
                     </form>

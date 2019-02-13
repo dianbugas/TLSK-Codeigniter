@@ -52,14 +52,14 @@ class Auth extends CI_Controller
         if ($user['token'] !== $token)
             die('token not match');
 
-          //update user role
+        //update user role
         $this->User_model->update_role($user['id'], 1);
 
-          //set session
+        //set session
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['logged_in'] = true;
 
-          //redirect profile
+        //redirect profile
         redirect('profile');
     }
 
