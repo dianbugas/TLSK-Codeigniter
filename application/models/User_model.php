@@ -26,6 +26,7 @@ class User_model extends CI_Model
         if (!empty($query->row_array())) {
             return $query->row_array();
         }
+
         return false;
     }
 
@@ -38,11 +39,21 @@ class User_model extends CI_Model
 
     public function is_LoggedIn()
     {
-        if (!isset($_SESSION['logged_id '])) {
+        if (!isset($_SESSION['logged_in'])) {
             return false;
         }
 
         return true;
+    }
+
+    public function checkPassword($email, $password)
+    {
+        $hash = $this->get_user('email', $email)['password'];
+        if (password_verify($password, $hash)) {
+            return true;
+        }
+
+        return false;
     }
 }
 

@@ -2,7 +2,7 @@
     <div class="row mt-4">
         <div class="col-md-6">
     
-            <?= form_open('auth/login') ?>
+            <?= form_open('login') ?>
             <div class="form-group">
                 <label for="">Email</label>
                 <?= form_error('email'); ?>
