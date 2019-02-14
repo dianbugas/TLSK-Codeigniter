@@ -2,7 +2,11 @@
     <div class="row mt-4">
         <div class="col md-8">
             <div class="card">
-                <div class="card-header"><marquee behavior="" direction=""><h1 class="page-header" align="center">Aplikasi Tata Laksana Surat Dan Kearsipan</h1></marquee></div>
+                <div class="card-header">
+                    <marquee behavior="" direction="">
+                        <h1 class="page-header" align="center">Aplikasi Tata Laksana Surat Dan Kearsipan</h1>
+                    </marquee>
+                </div>
                     <div class="site-index">
                         <div class="col-lg-12">
                             <h1 class="page-header" align="center">
