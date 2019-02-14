@@ -50,17 +50,17 @@
                                     curr_second = checkTime(curr_second);
                                     document.getElementById('clock').innerHTML = curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
                                     }
-                                    function checkTime(i) {
-                                        if (i < 10) {
-                                            i = "0" + i;
-                                        }
-                                        return i;
+                                function checkTime(i) {
+                                    if (i < 10) {
+                                    i = "0" + i;
                                     }
-                                    setInterval(showTime, 500);
-                                </script>
-                            </div>
-                            </h1>
-                        </div>   
+                                    return i;
+                                }
+                                setInterval(showTime, 500);
+                            </script>
+                        </div>
+                        </h1>
+                    </div>   
                 </div>
             </div>
         </div>
