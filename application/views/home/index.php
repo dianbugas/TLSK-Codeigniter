@@ -25,19 +25,19 @@
                                     var montharray = new
                                             Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember")
                                     document.write("" + dayarray[day] + ", " + daym + " " + montharray[month] + " " + year + "")
-                                </script>
-                            <div id="clock">
-                                <script type="text/javascript">
-                                    function showTime() {
-                                    var a_p = "";
-                                    var today = new Date();
-                                    var curr_hour = today.getHours();
-                                    var curr_minute = today.getMinutes();
-                                    var curr_second = today.getSeconds();
-                                    if (curr_hour < 12) {
-                                        a_p = "AM";
-                                    } else {
-                                        a_p = "PM";
+                            </script>
+                        <div id="clock">
+                            <script type="text/javascript">
+                                function showTime() {
+                                var a_p = "";
+                                var today = new Date();
+                                var curr_hour = today.getHours();
+                                var curr_minute = today.getMinutes();
+                                var curr_second = today.getSeconds();
+                                if (curr_hour < 12) {
+                                    a_p = "AM";
+                                } else {
+                                    a_p = "PM";
                                 }
                                 if (curr_hour == 0) {
                                     curr_hour = 24;
