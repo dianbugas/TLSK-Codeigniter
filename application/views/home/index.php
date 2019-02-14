@@ -5,7 +5,7 @@
                 <div class="card-header">
                     <div class="site-index">
                         <div class="col-lg-12">
-                            <h1 class="page-header" align="center">Selamat Datang di Aplikasi Tata Laksana Surat Dan Kearsipan<br/>
+                            <h1 class="page-header" align="center">Selamat Datang<br> Di Aplikasi Tata Laksana Surat Dan Kearsipan<br/>
                                 <script type="text/javascript">
                                     var mydate = new Date()
                                     var year = mydate.getYear()
