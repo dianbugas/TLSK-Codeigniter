@@ -87,7 +87,7 @@ class Suratkeluar extends CI_Controller
 
     public function _uploadImage()
     {
-        $config['upload_path'] = './upload/file/';
+        $config['upload_path'] = '../uploads/file/';
         $config['allowed_types'] = 'pdf|jpg|png';
         $config['file_name'] = $this->surat;
         $config['overwrite'] = true;

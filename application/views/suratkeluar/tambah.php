@@ -6,7 +6,7 @@
                     Form Tambah Data Surat Keluar
                 </div>
                 <div class="card-body">
-                    <form action="" method='post'>
+                    <form action="#" method='post'>
                         <div class="form-group row">
                             <label for="nomor_surat" class="col-sm-2 col-form-label">Nomor Surat</label>
                             <div class="col-sm-7">
