@@ -10,12 +10,12 @@
     <script src="<?= base_url(); ?>assets/js/myscript.js"></script>    
     <script type="text/javascript">
         function showTime() {
-                var a_p = "";
-                var today = new Date();
-                var curr_hour = today.getHours();
-                var curr_minute = today.getMinutes();
-                var curr_second = today.getSeconds();
-                if (curr_hour < 12) {
+            var a_p = "";
+            var today = new Date();
+            var curr_hour = today.getHours();
+            var curr_minute = today.getMinutes();
+            var curr_second = today.getSeconds();
+            if (curr_hour < 12) {
                     a_p = "AM";
                 } else {
                     a_p = "PM";
