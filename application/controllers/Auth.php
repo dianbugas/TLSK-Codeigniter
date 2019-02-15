@@ -96,7 +96,6 @@ class Auth extends CI_Controller
             $this->form_validation->set_message('checkEmail', 'email is not on database');
             return false;
         }
-
         return true;
     }
 
@@ -108,7 +107,6 @@ class Auth extends CI_Controller
             $this->form_validation->set_message('checkPassword', 'password is incorrect');
             return false;
         }
-
         return true;
     }
 
@@ -119,7 +117,6 @@ class Auth extends CI_Controller
             $this->form_validation->set_message('checkRole', 'email is not actived yet');
             return false;
         }
-
         return true;
     }
 

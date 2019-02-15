@@ -34,7 +34,6 @@ class Suratkeluar_model extends CI_Model
             "surat" => $this->input->post('surat', true)
         ];
 
-
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('suratkeluar', $data);
     }
