@@ -9,8 +9,6 @@
     <script src="<?= base_url(); ?>assets/plugin/js/bootstrap-datepicker.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/myscript.js"></script>    
     <script type="text/javascript">
-     <script type="text/javascript">
-                
             function showTime() {
                     var a_p = "";
                     var today = new Date();

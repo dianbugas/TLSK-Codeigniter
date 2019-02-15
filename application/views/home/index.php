@@ -11,21 +11,23 @@
                     <div class="col-lg-12">
                         <h1 class="page-header" align="center">
                             <script type="text/javascript">
-                                var mydate = new Date()
-                                var year = mydate.getYear()
-                                if (year < 1000)
-                                    year += 1900
-                                var day = mydate.getDay()
-                                var month = mydate.getMonth()
-                                var daym = mydate.getDate()
-                                if (daym < 10)
-                                    daym = "0" + daym
-                                var dayarray = new
-                                        Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu")
-                                var montharray = new
-                                        Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus" "September", "Oktober", "November", "Desember")
-                                document.write("" + dayarray[day] + ", " + daym + " " + montharray[month] + " " + year+ "")
-                            </script>
+
+                            var mydate = new Date()
+                            var year = mydate.getYear()
+                            if (year < 1000)
+                                year += 1900
+                            var day = mydate.getDay()
+                            var month = mydate.getMonth()
+                            var daym = mydate.getDate()
+                            if (daym < 10)
+                                daym = "0" + daym
+                            var dayarray = new
+                                    Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu")
+                            var montharray = new
+                                    Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember")
+                            document.write("" + dayarray[day] + ", " + daym + " " + montharray[month] + " " + year + "")
+
+                        </script>
                         <div id="clock">
                             <script type="text/javascript">
                                 function showTime() {

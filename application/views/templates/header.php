@@ -60,22 +60,22 @@
                 </div>
             </div>
             <div class="dropdown justify-content-end">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Admin
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="#">Ubah Password</a>
-                            <a class="dropdown-item" href="register">Register</a>
-                            <? if (isset($_SESSION['logged_in'])) { ?>
-                            <a class="dropdown-item" href="logout">Logout</a>
-                            <?
-                        } else { ?>
-                            <a class="dropdown-item" href="login">Login</a>
-                            <?
-                        } ?>
-                        </div>
-                    </div>
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Ubah Password</a>
+                    <a class="dropdown-item" href="register">Register</a>
+                    <? if (isset($_SESSION['logged_in'])) { ?>
+                    <a class="dropdown-item" href="logout">Logout</a>
+                    <?
+                } else { ?>
+                    <a class="dropdown-item" href="login">Login</a>
+                    <?
+                } ?>
+                </div>
+            </div>
         </div>    
     </nav>
     

@@ -100,8 +100,6 @@ class Suratkeluar extends CI_Controller
         if ($this->upload->do_upload('surat')) {
             return $this->upload->data("file_name");
         }
-
-        return "default.jpg";
     }
 
 }
