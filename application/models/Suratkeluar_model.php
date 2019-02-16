@@ -48,16 +48,16 @@ class Suratkeluar_model extends CI_Model
         $this->db->delete('suratkeluar', ['id' => $id]);
     }
 
-    public function save()
-    {
-        $post = $this->input->post();
-        $this->surat = uniqid();
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->surat = $this->_uploadImage();
-        $this->description = $post["description"];
-        $this->db->insert($this->_table, $this);
-    }
+    // public function save()
+    // {
+    //     $post = $this->input->post();
+    //     $this->surat = uniqid();
+    //     $this->name = $post["name"];
+    //     $this->price = $post["price"];
+    //     $this->surat = $this->_uploadImage();
+    //     $this->description = $post["description"];
+    //     $this->db->insert($this->_table, $this);
+    // }
 
     public function cariDataSuratKeluar()
     {

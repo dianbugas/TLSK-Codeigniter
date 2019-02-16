@@ -85,8 +85,8 @@ class Auth extends CI_Controller
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['logged_in'] = true;
 
-             //redirect profile
-            redirect('profile');
+            //redirect ke home ketika berhasil login
+            redirect('home');
         }
     }
 

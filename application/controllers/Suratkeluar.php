@@ -85,19 +85,19 @@ class Suratkeluar extends CI_Controller
         redirect('suratkeluar');
     }
 
-    public function _uploadImage()
+    public function uploadImage()
     {
-        $config['upload_path'] = '../uploads/file/';
+        $config['upload_path'] = './uploads/file/';
         $config['allowed_types'] = 'pdf|jpg|png';
         $config['file_name'] = $this->surat;
-        $config['overwrite'] = true;
+        // $config['overwrite'] = true;
         $config['max_size'] = 3024; // 1MB
     // $config['max_width']            = 1024;
     // $config['max_height']           = 768;
 
         $this->load->library('upload', $config);
 
-        if ($this->upload->do_upload('surat')) {
+        if ($this->Suratkeluar->uploadImage('surat')) {
             return $this->upload->data("file_name");
         }
     }
