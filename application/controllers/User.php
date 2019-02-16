@@ -22,5 +22,6 @@ class User extends CI_Controller
         $this->load->view('user/profile', $data);
         $this->load->view('templates/footer');
     }
-
 }
+
+//halaman profile belum dibuat
