@@ -89,7 +89,7 @@ class Suratkeluar extends CI_Controller
     {
         $config['upload_path'] = './uploads/file/';
         $config['allowed_types'] = 'pdf|jpg|png';
-        $config['file_name'] = $this->surat;
+        // $config['file_name'] = $this->surat;
         // $config['overwrite'] = true;
         $config['max_size'] = 3024; // 1MB
     // $config['max_width']            = 1024;
@@ -97,9 +97,8 @@ class Suratkeluar extends CI_Controller
 
         $this->load->library('upload', $config);
 
-        if ($this->Suratkeluar->uploadImage('surat')) {
-            return $this->upload->data("file_name");
-        }
+        $this->Suratkeluar->uploadImage();
+        $hasil = $this->uplode->data();
     }
 
 }
