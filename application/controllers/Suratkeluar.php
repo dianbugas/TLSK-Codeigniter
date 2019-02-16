@@ -87,8 +87,8 @@ class Suratkeluar extends CI_Controller
 
     public function uploadImage()
     {
-        $config['upload_path'] = '../uploads/file/';
-        $config['allowed_types'] = 'pdf|jpg|png';
+        $config['upload_path'] = '../uploads/';
+        $config['allowed_types'] = 'pdf|jpg|png|odt|docx';
         // $config['file_name'] = $this->surat;
         // $config['overwrite'] = true;
         $config['max_size'] = 3024; // 1MB
