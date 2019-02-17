@@ -9,6 +9,14 @@ class Auth extends CI_Controller
         $this->load->model('User_model');
     }
 
+    public function profile()
+    {
+        $data['judul'] = 'User';
+        $this->load->view('templates/header', $data);
+        $this->load->view('auth/profile');
+        $this->load->view('templates/profile');
+    }
+
     public function register()
     {
         $data['judul'] = 'Halaman Register';
