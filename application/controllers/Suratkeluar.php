@@ -88,11 +88,12 @@ class Suratkeluar extends CI_Controller
 
     public function do_upload()
     {
-        $this->load->library('upload');
-        $config['upload_path'] = './uploads/';
-        $config['allowed_types'] = 'png|jpg|bmp';
-        $this->upload->initialize($config);
-        $upload = $this->upload->do_upload();
+        $config['upload_path'] = './upload/file/';
+        $config['allowed_types'] = 'pdf|jpg|png';
+        // $config['file_name'] = $this->surat;
+        // $config['overwrite'] = true;
+        $config['max_size'] = 3024; // 1MB
+
     }
 
 }
