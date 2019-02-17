@@ -53,7 +53,6 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="<?= base_url(); ?>instansi">Instansi</a>
-                            <a class="dropdown-item" href="<?= base_url(); ?>users">Users</a>
                             <a class="dropdown-item" href="<?= base_url(); ?>divisi">Divisi</a>
                         </div>
                     </div>
@@ -64,7 +63,7 @@
                     Admin
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="<?= base_url(); ?>user">Profile</a>
                     <a class="dropdown-item" href="#">Ubah Password</a>
                     <a class="dropdown-item" href="register">Register</a>
                     <? if (isset($_SESSION['logged_in'])) { ?>

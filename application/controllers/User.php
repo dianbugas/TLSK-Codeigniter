@@ -9,6 +9,14 @@ class User extends CI_Controller
         $this->load->model('User_model');
     }
 
+    public function index()
+    {
+        $data['judul'] = 'Profil User';
+        $this->load->view('templates/header', $data);
+        $this->load->view('user/profile');
+        $this->load->view('templates/footer');
+    }
+
     public function profile()
     {
         $data['judul'] = 'Halaman Profile';

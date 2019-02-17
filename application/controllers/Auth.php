@@ -84,7 +84,8 @@ class Auth extends CI_Controller
             //set session
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['logged_in'] = true;
-
+            //flash
+            $this->session->set_flashdata('flash', 'berhasil login');
             //redirect ke home ketika berhasil login
             redirect('home');
         }
