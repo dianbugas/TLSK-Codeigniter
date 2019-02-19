@@ -9,10 +9,10 @@
                     <form action="" method='post'>
                         <input type="hidden"  name="id" value="<?= $tbl_instansi['id']; ?>">
                         <div class="form-group row">
-                            <label for="nomor_surat" class="col-sm-2 col-form-label">Nomor Surat</label>
+                            <label for="institusi" class="col-sm-2 col-form-label">Nomor Surat</label>
                             <div class="col-sm-7">
-                            <input type="text" name="nomor_surat" class="form-control" id="nomor_surat" value="<?= $tbl_instansi['nomor_surat']; ?>">
-                            <small class="form-text text-danger"><?= form_error('nomor_surat'); ?></small>
+                            <input type="text" name="institusi" class="form-control" id="institusi" value="<?= $tbl_instansi['institusi']; ?>">
+                            <small class="form-text text-danger"><?= form_error('institusi'); ?></small>
                             </div>
                         </div>
                         <div class="form-group row">
