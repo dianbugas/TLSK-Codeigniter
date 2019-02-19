@@ -41,4 +41,45 @@ class Instansi extends CI_Controller
             redirect('instansi');
         }
     }
+
+    public function edit($id)
+    {
+        $data['judul'] = 'Ubah data Instansi';
+        $data['instansi'] = $this->Instansi_model->getDataInstansiById($id);
+        $this->form_validation->set_rules('institusi', 'Institusi', 'required');
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('status', 'Status', 'required');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'required');
+        $this->form_validation->set_rules('kepsek', 'Kepsek', 'required');
+        $this->form_validation->set_rules('nip', 'Nip', 'required');
+        $this->form_validation->set_rules('website', 'Website', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('logo', 'Logo', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('instansi/edit');
+            $this->load->view('templates/footer');
+        } else {
+            $this->Instansi_model->editDataInstansi($id);
+            $this->session->set_flashdata('flash', 'Diubah');
+            redirect('instansi');
+        }
+    }
+
+    public function detail($id)
+    {
+        $data['judul'] = 'Detail data Instansi';
+        $data['instansi'] = $this->Instansi_model->getDataInstansiById();
+        $this->load->view('templates/header', $data);
+        $this->load->view('instanis/detail', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function hapus($id)
+    {
+        $this->Instansi_model->hapusDataInstansi($id);
+        $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('instansi');
+    }
 }
