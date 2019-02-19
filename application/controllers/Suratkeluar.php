@@ -6,7 +6,6 @@ class Suratkeluar extends CI_Controller
         parent::__construct();
         $this->load->model('Suratkeluar_model');
         $this->load->library('form_validation');
-        $this->load->library('uplode', $config);
     }
 
     public function index()
