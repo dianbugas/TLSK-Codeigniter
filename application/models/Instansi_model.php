@@ -13,11 +13,40 @@ class Instansi_model extends CI_Model
             "nama" => $this->input->post('nama', true),
             "status" => $this->input->post('status', true),
             "alamat" => $this->input->post('alamat', true),
-            "kepsek" => $this->input
-                "nip"
-                "website"
-                "email"
-                "logo"
+            "kepsek" => $this->input->post('kepsek', true),
+            "nip" => $this->input->post('nip', true),
+            "website" => $this->input->post('website', true),
+            "email" => $this->input->post('email', true),
+            "logo" => $this->input->post('logo', true)
         ];
+        $this->db->insert('instansi', $data);
+    }
+
+    public function editDataInstansi()
+    {
+        $data = [
+            "institusi" => $this->input->post('institusi', true),
+            "nama" => $this->input->post('nama', true),
+            "status" => $this->input->post('status', true),
+            "alamat" => $this->input->post('alamat', true),
+            "kepsek" => $this->input->post('kepsek', true),
+            "nip" => $this->input->post('nip', true),
+            "website" => $this->input->post('website', true),
+            "email" => $this->input->post('email', true),
+            "logo" => $this->input->post('logo', true)
+        ];
+
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('instansi', $data);
+    }
+
+    public function getAllDataInstansiById($id)
+    {
+        return $this->db->get_where('instansi', ['id' => $id]->row_array);
+    }
+
+    public function hapusDataInstansi($id)
+    {
+        $this->db->delete('instansi', ['id' => $id]);
     }
 }

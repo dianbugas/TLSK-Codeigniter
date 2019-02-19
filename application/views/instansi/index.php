@@ -54,7 +54,7 @@
                         <tr>
                             <th class="text-center"><?= $no++; ?></th>
                             <th>
-                            <a href="#" class="fa fa-search-plus fa-lg"></a>
+                            <a href="<?= base_url(); ?>instansi/detail/<?= $ins['id']; ?>" class="fa fa-search-plus fa-lg"></a>
                             <a href="#" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
                             <a href="#" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
                             </th>
