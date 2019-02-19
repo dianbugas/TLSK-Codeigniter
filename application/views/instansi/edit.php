@@ -9,17 +9,17 @@
                     <form action="" method='post'>
                         <input type="hidden"  name="id" value="<?= $tbl_instansi['id']; ?>">
                         <div class="form-group row">
-                            <label for="institusi" class="col-sm-2 col-form-label">Nomor Surat</label>
+                            <label for="institusi" class="col-sm-2 col-form-label">Institusi</label>
                             <div class="col-sm-7">
                             <input type="text" name="institusi" class="form-control" id="institusi" value="<?= $tbl_instansi['institusi']; ?>">
                             <small class="form-text text-danger"><?= form_error('institusi'); ?></small>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="tanggal_surat" class="col-sm-2 col-form-label">Tanggal Surat</label>
+                            <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                             <div class="col-sm-7">
-                            <input type="date" name="tanggal_surat" class="form-control" value="<?= $tbl_instansi['tanggal_surat']; ?>">
-                            <small class="form-text text-danger"><?= form_error('tanggal_surat'); ?></small>
+                            <input type="date" name="nama" class="form-control" value="<?= $tbl_instansi['nama']; ?>">
+                            <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                             </div>
                         </div>
                         <div class="form-group row">
