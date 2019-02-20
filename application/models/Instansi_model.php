@@ -49,4 +49,20 @@ class Instansi_model extends CI_Model
     {
         $this->db->delete('instansi', ['id' => $id]);
     }
+
+    public function cariDataInstansi()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('institusi', $keyword);
+        $this->db->or_like('nama', $keyword);
+        $this->db->or_like('status', $keyword);
+        $this->db->or_like('alamat', $keyword);
+        $this->db->or_like('kepsek', $keyword);
+        $this->db->or_like('nip', $keyword);
+        $this->db->or_like('website', $keyword);
+        $this->db->or_like('email', $keyword);
+        $this->db->or_like('logo', $keyword);
+        $this->db->or_like('id_user', $keyword);
+        return $this->db->get('tbl_instansi')->result_array();
+    }
 }

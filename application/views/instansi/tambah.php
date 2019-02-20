@@ -9,15 +9,15 @@
                 <small class="form-text text-danger"><?= form_error('institusi'); ?></small>
             </div>
             <div class="form-group col-md-6">
-             <label for="nama">Nama</label>
+                <label for="nama">Nama</label>
                 <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama">
                 <small class="form-text text-danger"><?= form_error('nama'); ?></small>           
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <label for="nama">Nama</label>
+            <input type="email" class="form-control" id="nama" placeholder="Nama">
             </div>
             <div class="form-group col-md-6">
             <label for="inputPassword4">Password</label>
@@ -26,8 +26,8 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <label for="status">Status</label>
+            <input type="email" class="form-control" id="status" placeholder="Status">
             </div>
             <div class="form-group col-md-6">
             <label for="inputPassword4">Password</label>
@@ -36,8 +36,8 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <label for="alamat">Alamat</label>
+            <input type="email" class="form-control" id="alamat" placeholder="Alamat">
             </div>
             <div class="form-group col-md-6">
             <label for="inputPassword4">Password</label>

@@ -13,6 +13,9 @@ class Instansi extends CI_Controller
     {
         $data['judul'] = 'Halaman Instansi';
         $data['tbl_instansi'] = $this->Instansi_model->getAllDataInstansi();
+        if ($this->input->post('keyword')) {
+            $data['tbl_instansi'] = $this->Instansi_model->cariDataInstansi();
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('instansi/index', $data);
         $this->load->view('templates/footer');
@@ -30,6 +33,7 @@ class Instansi extends CI_Controller
         $this->form_validation->set_rules('website', 'Website', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('logo', 'Logo', 'required');
+        $this->form_validation->set_rules('id_user', 'id_user', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
@@ -55,6 +59,8 @@ class Instansi extends CI_Controller
         $this->form_validation->set_rules('website', 'Website', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('logo', 'Logo', 'required');
+        $this->form_validation->set_rules('logo', 'Logo', 'required');
+        $this->form_validation->set_rules('id_user', 'id_user', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
