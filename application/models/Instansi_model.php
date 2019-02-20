@@ -3,7 +3,7 @@ class Instansi_model extends CI_Model
 {
     public function getAllDataInstansi()
     {
-        return $this->db->get('tbl_instansi')->result_array();
+        return $this->db->get('instansi')->result_array();
     }
 
     public function tambahDataInstansi()
@@ -17,7 +17,8 @@ class Instansi_model extends CI_Model
             "nip" => $this->input->post('nip', true),
             "website" => $this->input->post('website', true),
             "email" => $this->input->post('email', true),
-            "logo" => $this->input->post('logo', true)
+            "logo" => $this->input->post('logo', true),
+            "id_user" => $this->input->post('iduser', true)
         ];
         $this->db->insert('instansi', $data);
     }
@@ -33,16 +34,18 @@ class Instansi_model extends CI_Model
             "nip" => $this->input->post('nip', true),
             "website" => $this->input->post('website', true),
             "email" => $this->input->post('email', true),
-            "logo" => $this->input->post('logo', true)
+            "logo" => $this->input->post('logo', true),
+            "id_user" => $this->input->post('iduser', true)
+
         ];
 
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('instansi', $data);
     }
 
-    public function getAllDataInstansiById($id)
+    public function getInstansiById($id)
     {
-        return $this->db->get_where('instansi', ['id' => $id]->row_array);
+        return $this->db->get_where('instansi', ['id' => $id])->row_array();
     }
 
     public function hapusDataInstansi($id)
@@ -63,6 +66,6 @@ class Instansi_model extends CI_Model
         $this->db->or_like('email', $keyword);
         $this->db->or_like('logo', $keyword);
         $this->db->or_like('id_user', $keyword);
-        return $this->db->get('tbl_instansi')->result_array();
+        return $this->db->get('instansi')->result_array();
     }
 }

@@ -12,9 +12,9 @@ class Instansi extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Halaman Instansi';
-        $data['tbl_instansi'] = $this->Instansi_model->getAllDataInstansi();
+        $data['instansi'] = $this->Instansi_model->getAllDataInstansi();
         if ($this->input->post('keyword')) {
-            $data['tbl_instansi'] = $this->Instansi_model->cariDataInstansi();
+            $data['instansi'] = $this->Instansi_model->cariDataInstansi();
         }
         $this->load->view('templates/header', $data);
         $this->load->view('instansi/index', $data);
@@ -33,14 +33,14 @@ class Instansi extends CI_Controller
         $this->form_validation->set_rules('website', 'Website', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('logo', 'Logo', 'required');
-        $this->form_validation->set_rules('id_user', 'id_user', 'required');
+        $this->form_validation->set_rules('iduser', 'iduser', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('instansi/tambah');
             $this->load->view('templates/footer');
         } else {
-            $this->Suratkeluar_model->tambahDataInstansi();
+            $this->Instansi_model->tambahDataInstansi();
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('instansi');
         }
@@ -49,7 +49,7 @@ class Instansi extends CI_Controller
     public function edit($id)
     {
         $data['judul'] = 'Ubah data Instansi';
-        $data['instansi'] = $this->Instansi_model->getDataInstansiById($id);
+        $data['instansi'] = $this->Instansi_model->getInstansiById($id);
         $this->form_validation->set_rules('institusi', 'Institusi', 'required');
         $this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_rules('status', 'Status', 'required');
@@ -59,12 +59,11 @@ class Instansi extends CI_Controller
         $this->form_validation->set_rules('website', 'Website', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('logo', 'Logo', 'required');
-        $this->form_validation->set_rules('logo', 'Logo', 'required');
-        $this->form_validation->set_rules('id_user', 'id_user', 'required');
+        $this->form_validation->set_rules('iduser', 'iduser', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
-            $this->load->view('instansi/edit');
+            $this->load->view('instansi/edit', $data);
             $this->load->view('templates/footer');
         } else {
             $this->Instansi_model->editDataInstansi($id);
@@ -76,9 +75,9 @@ class Instansi extends CI_Controller
     public function detail($id)
     {
         $data['judul'] = 'Detail data Instansi';
-        $data['instansi'] = $this->Instansi_model->getDataInstansiById();
+        $data['instansi'] = $this->Instansi_model->getInstansiById($id);
         $this->load->view('templates/header', $data);
-        $this->load->view('instanis/detail', $data);
+        $this->load->view('instansi/detail', $data);
         $this->load->view('templates/footer');
     }
 

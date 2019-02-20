@@ -32,7 +32,7 @@
         <div class="col md-6">
             <div class="table-responsive-sm">
                 <h3>Daftar Instansi</h3>
-                <?php if (empty($tbl_instansi)) : ?>
+                <?php if (empty($instansi)) : ?>
                     <div class="alert alert-danger" role="alert">
                         Data Instansi tidak ditemukan
                     </div>
@@ -50,13 +50,13 @@
                     <tbody>
                         <?php
                         $no = 1;
-                        foreach ($tbl_instansi as $ins) : ?>
+                        foreach ($instansi as $ins) : ?>
                         <tr>
                             <th class="text-center"><?= $no++; ?></th>
                             <th>
                             <a href="<?= base_url(); ?>instansi/detail/<?= $ins['id']; ?>" class="fa fa-search-plus fa-lg"></a>
-                            <a href="#" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
-                            <a href="#" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
+                            <a href="<?= base_url(); ?>instansi/edit/<?= $ins['id']; ?>" class="fa fa-pencil-square-o fa-lg" style="color:Green"></a>
+                            <a href="<?= base_url(); ?>instansi/hapus/<?= $ins['id']; ?>" class="fa fa-trash fa-lg tombol-hapus" style="color:red"></a>
                             </th>
                             <th><?= $ins['institusi']; ?></th>
                             <th><?= $ins['nama']; ?></th>
