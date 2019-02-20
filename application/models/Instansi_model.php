@@ -67,5 +67,6 @@ class Instansi_model extends CI_Model
         $this->db->or_like('logo', $keyword);
         $this->db->or_like('iduser', $keyword);
         return $this->db->get('instansi')->result_array();
+        //masalah
     }
 }
