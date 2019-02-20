@@ -73,3 +73,5 @@ class Suratkeluar_model extends CI_Model
         return $this->db->get('suratkeluar')->result_array();
     }
 }
+
+//masih eroor
