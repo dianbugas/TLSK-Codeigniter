@@ -38,7 +38,7 @@
                     </div>
                 <?php endif; ?>
                 <table class="table table-striped table-bordered">
-                    <thead class="thead-dark">
+                    <thead class="thead">
                         <tr>
                             <th scope="col md-3" class="text-center">no</th>
                             <th scope="col" class="text-center">Status</th>

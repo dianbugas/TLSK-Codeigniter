@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="logo">Logo</label>
-                    <input type="text" class="form-control-file" id="exampleFormControlFile1" name="logo" id="logo">
+                    <input type="text" class="logo" id="logo" name="logo" id="logo">
                     <small class="form-text text-danger"><?= form_error('logo'); ?></small>
                 </div>
             </div>
